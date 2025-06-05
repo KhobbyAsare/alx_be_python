@@ -1,0 +1,67 @@
+The line:
+
+```python
+if __name__ == "__main__":
+```
+
+is a special Python construct used to **control the execution of code** when a script is run
+directly vs. when it's imported as a module.
+
+---
+
+### 🔍 What it means:
+
+* When a Python file is **run directly**, like:
+
+  ```bash
+  python explore_datetime.py
+  ```
+
+  then the special built-in variable `__name__` is set to `"__main__"`.
+  So the block under `if __name__ == "__main__":` will **run**.
+
+* When that same file is **imported** into another Python script, like:
+
+  ```python
+  import explore_datetime
+  ```
+
+  then `__name__` will be set to `"explore_datetime"` (the module's name),
+  so the code under `if __name__ == "__main__":` will **not run** automatically.
+
+---
+
+### ✅ Why it's useful:
+
+It helps you write reusable code.
+You can:
+
+* **Run the script directly** for testing or standalone use.
+* **Import it in other scripts** without triggering the main logic unintentionally.
+
+---
+
+### Example:
+
+```python
+# file: greetings.py
+
+def say_hello():
+    print("Hello!")
+
+if __name__ == "__main__":
+    say_hello()
+```
+
+* Run `python greetings.py` → Output: `Hello!`
+* Run from another script:
+
+  ```python
+  import greetings
+  ```
+
+  → Nothing is printed, unless you call `greetings.say_hello()` explicitly.
+
+---
+
+Let me know if you'd like a visual flow or how this helps in larger projects!
