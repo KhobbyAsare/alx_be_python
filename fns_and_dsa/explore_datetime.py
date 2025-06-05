@@ -19,10 +19,11 @@ def calculate_future_date():
     Prompts user for number of days and calculates the future date
     """
     try:
-        number_of_days = int(input("Enter a number of days: "))
         curr_date = display_current_datetime()  # returns a datetime object
+        number_of_days = int(input("Enter a number of days: "))
         future_date = curr_date + timedelta(days=number_of_days)
-        print("Future Date after", number_of_days, "days:", future_date.strftime("%Y-%m-%d"))
+        print(f"Future date: {future_date}")
+        # print("Future Date after", number_of_days, "days:", future_date.strftime("%Y-%m-%d"))
     except ValueError:
         print("Please enter a valid integer for the number of days.")
 
