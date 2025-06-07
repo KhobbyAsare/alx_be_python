@@ -19,7 +19,7 @@ def main():
             temperature = float(input("Enter the temperature to convert: "))
             temperature_state = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").capitalize()
         except ValueError:
-            print("Please enter a valid input.")
+            print("Invalid temperature. Please enter a numeric value.")
             continue
 
         if temperature_state == "C":
