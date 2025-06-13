@@ -1,3 +1,9 @@
+"""
+Task Description:
+You will create two Python scripts: bank_account.py, which contains the BankAccount class, and main-0.py,
+which interfaces with the class through command line arguments to perform banking operations.
+"""
+
 class BankAccount:
     def __init__(self, initial_balance=0):
         self._account_balance = initial_balance
