@@ -5,7 +5,7 @@ and main.py, which interfaces with the user through the command line.
 
 """
 
-def safe_divide(numerator, denominator) -> float | str:
+def safe_divide(numerator, denominator) ->  str:
     try:
         # Attempt to convert inputs to float
         numerator = float(numerator)
@@ -13,7 +13,7 @@ def safe_divide(numerator, denominator) -> float | str:
 
         # Perform division
         result = numerator / denominator
-        return result
+        return f"The result of the division is {result}"
 
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
